@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&lt;/salt&gt; :: ToDo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style/todo.css">
+  <script defer src="./js/todo.js"></script>
+</head>
+
+<body>
+  <section>
+    <p>Welcome to <u>To-Do-List.</u> Today is <span class="date" id="date"></span></p>
+  </section>
+  <form>
+    <label for="task">Task:</label><br>
+    <input type="text" id="task" placeholder="Add a task"><br>
+    <label for="info">Description:</label><br>
+    <input type="text" id="description" placeholder="Add a description"><br><br>
+    <button id="add" type="submit">
+      <svg height="25px" viewBox="0 0 426.66667 426.66667" width="25px" xmlns="http://www.w3.org/2000/svg"><path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0"/></svg>
+    </button>
+  </form> 
+  <div class="container">
+    <ul class="todo pending" id="pending"></ul>
+    <ul class="todo done" id="done"></ul>
+  </div>
+</body>
+
+</html>

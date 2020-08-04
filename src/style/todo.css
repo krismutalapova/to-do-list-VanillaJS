@@ -1,0 +1,251 @@
+/* Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-image: linear-gradient(#3494E6, #CF8BF3);
+  height: 100vh;
+  padding: 120px 0 0 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Layout */
+
+section {
+  width: 80%;
+  height: 40px;
+  margin: 30px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: white;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  background:#d9a6f5;
+  box-shadow: 0px 2px 4px #371f44(44, 62, 80, 0.15);
+}
+
+form {
+  width: 80%;
+  height: 160px;
+  margin: 80px 30px 30px;
+  position: absolute;
+  padding: 15px;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  background:#d9a6f5;
+  box-shadow: 0px 2px 4px #371f44(44, 62, 80, 0.15);
+}
+
+form input {
+  width: 100%;
+  height: 40px;
+  float: left;
+  color: black;
+  font-size: 14px;
+  text-indent: 14px;
+  padding: 0 60px 0 0;
+  margin-bottom: 5px;;
+  background:  #efd9fa;
+  border-radius: 10px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+}
+
+form label {
+  font-size: 15px;
+  float: left;
+  width: 100px;
+  margin-left: 8px;
+  margin-bottom: 2px;
+}
+
+form button {
+  width: 40px;
+  height: 40px;
+  position:absolute;
+  top:98px;
+  right:15px;
+  z-index:2;
+  border-radius: 10px;
+  background: #efd9fa;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+
+form button svg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -8px 0 0 -8px;
+  fill: #ba54f0;
+}
+
+.container {
+  width: 100%;
+  float: left;
+  padding: 15px;
+  margin-top: 120px;
+}
+
+ul {
+  width: 90%;
+  float: left;
+  margin-left: 20px;
+}
+
+li {
+  width: 90%;
+  min-height: 50px;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  line-height: 22px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+  margin: 0 0 10px 0;
+  padding: 14px 100px 14px 14px;
+  list-style: none;
+}
+
+/* Theme */
+
+.buttons button svg {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -11px 0 0 -11px;
+  fill: #ca7df4;
+}
+
+.buttons button.done svg {
+  border-radius: 11px;
+  border: 1.5px solid #ca7df4;
+}
+
+ul.done li {
+  text-decoration: line-through;
+  opacity: 60%;
+}
+
+ul.done li .buttons button.done svg {
+  background: #ca7df4;
+  fill: white;
+  border: 0px;
+}
+
+/* Module */
+
+.buttons {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: none;
+  position: relative;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+
+ul.done {
+  position: relative;
+  padding: 60px 0 0 0;
+}
+
+/* State */
+
+ul.done:before {
+  content: '';
+  width: 90%;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 30px;
+} 
+
+ul.pending:empty:after {
+  content: 'You have no tasks in your to-do list!';
+  margin: 15px 0 0 0;
+}
+
+ul.done:empty:after {
+  content: 'You haven\'t completed any tasks';
+}
+
+ul.pending:after,
+ul.done:after {
+  width: 90%;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color:white;
+}
+
+ul.done li .buttons button.done:hover svg {
+  background: white;
+  fill: #ca7df4;
+}
+
+ul.todo li:hover {
+  transform: scale(1.01);
+  transition-duration: 0.5s;
+}
+
+ul.done li .buttons button.remove:hover svg {
+  background: white;
+  fill: black;
+}
+
+ul.pending li .buttons button.done:hover svg {
+  background: #ca7df4;
+  fill: white;
+  border: 0px;
+}
+
+ul.pending li .buttons button.remove:hover svg {
+  background: white;
+  fill: black;
+}
+
+@media screen and (max-width: 500px) {
+
+  html {
+      font-size: 14px;
+  }
+
+  section {
+      padding: 0 7px;
+  }
+}
+
